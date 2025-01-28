@@ -1,0 +1,50 @@
+.hamburger-menu {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 15px; /* Add spacing between buttons */
+}
+
+.menu-item {
+    width: 250px; /* Wider buttons for a hamburger style */
+    height: 60px; /* Slightly taller buttons */
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 0; /* Remove button padding */
+    display: flex; /* Flexbox for aligning images inside the button */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.menu-item img {
+    width: 50%; /* Make the image smaller to fit nicely */
+    height: auto;
+    object-fit: contain; /* Ensure the image is scaled correctly */
+    pointer-events: none; /* Prevent the image from interfering with clicks */
+}
+
+.menu-item:hover img {
+    content: url('closed-flower-hover.png'); /* Change to the hover flower image */
+}
+
+.menu-item:active img {
+    content: url('opened-flower.png'); /* Change to the clicked flower image */
+}
+
+/* Optional: Center the whole menu on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+}

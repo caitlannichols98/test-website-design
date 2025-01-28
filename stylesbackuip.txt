@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    flex-direction: column;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    width: 200px;
+    height: 50px;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black; /* Box color set to black */
+    color: white;
+    border: 2px solid white; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #333333; /* Slightly lighter black for hover effect */
+    transform: scale(1.1);
+}
+
+.menu-item:active {
+    background-color: #222222; /* Darker black for active state */
+    transform: scale(0.95);
+}
+
+/* No longer customizing individual button colors, keeping them uniform */
