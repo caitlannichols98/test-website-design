@@ -1,6 +1,7 @@
-// Simple script to handle button clicks or other dynamic actions
-document.querySelectorAll('.menu-item').forEach(button => {
-    button.addEventListener('click', function() {
-        alert(`${button.textContent} clicked, thank you for testing!`);
+// Handle link clicks
+document.querySelectorAll('.menu-item').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent navigation for testing
+        alert(`${link.id} clicked, thank you for testing!`);
     });
 });
