@@ -1,7 +1,4 @@
-// Handle link clicks
-document.querySelectorAll('.menu-item').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent navigation for testing
-        alert(`${link.id} clicked, thank you for testing!`);
-    });
+document.getElementById("link5").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevents default link behavior
+    alert("This is just a test for the function for notification to work. Thank you!");
 });

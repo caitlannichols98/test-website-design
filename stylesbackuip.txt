@@ -1,50 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Center body content with title above buttons */
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f7f7f7;
-    flex-direction: column;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/* Style the header */
+header {
+    margin-bottom: 20px; /* Add spacing between the header and the menu */
+    text-align: center; /* Center-align the title text */
 }
 
 header h1 {
-    margin-bottom: 20px;
+    font-size: 36px; /* Adjust the size of the title */
+    color: #333; /* Use a darker color for better visibility */
+    margin: 0; /* Remove default margin */
 }
 
 .menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between menu items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
 }
 
 .menu-item {
-    width: 200px;
-    height: 50px;
-    margin: 10px 0;
+    width: 300px; /* Adjust for better visibility */
+    height: 70px;
     font-size: 18px;
     font-weight: bold;
-    background-color: black; /* Box color set to black */
+    background-color: black;
     color: white;
-    border: 2px solid white; /* White border */
-    border-radius: 15px; /* Rounded corners */
+    border: 2px solid white;
+    border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
-.menu-item:hover {
-    background-color: #333333; /* Slightly lighter black for hover effect */
-    transform: scale(1.1);
+.menu-item img {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
 }
 
-.menu-item:active {
-    background-color: #222222; /* Darker black for active state */
-    transform: scale(0.95);
+.menu-item:hover img {
+    content: url('open-flower.png');
 }
 
-/* No longer customizing individual button colors, keeping them uniform */
+.menu-item:active img {
+    content: url('opened-flower.png');
+}
