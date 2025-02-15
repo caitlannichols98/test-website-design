@@ -1,0 +1,97 @@
+body {
+    background-image: url('backgorund.png'); 
+    background-size: cover; /* Make sure ti covers the screen */
+    background-position: center; /* Center the GIF */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep it fixed while scrolling */
+}
+/* VHS Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('backgorund.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+/* VHS Overlay */
+.vhs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.03) 50%, 
+        rgba(0, 0, 0, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    animation: scan-lines 1s linear infinite;
+}
+
+/* Static Noise Effect */
+.vhs-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    animation: noise 0.2s infinite;
+}
+
+/* VHS Scan Line Animation */
+@keyframes scan-lines {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100px; }
+}
+
+/* Noise Flicker Effect */
+@keyframes noise {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 0.25; }
+}
+
+/* VHS Jitter Effect */
+@keyframes vhs-jitter {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-1px); }
+    50% { transform: translateX(1px); }
+    75% { transform: translateX(-0.5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Chromatic Aberration */
+@keyframes chromatic-aberration {
+    0%, 100% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    50% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+
+/* VHS Text */
+.vhs-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-family: "Arial Black", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    filter: contrast(1.2) brightness(1.1);
+}
+
+.vhs-text {
+    font-size: 5rem;
+    font-family: "Arial Black", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    filter: contrast(1.2) brightness(1.2);
+}

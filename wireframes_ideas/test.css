@@ -1,0 +1,20 @@
+
+/* Image Gallery Grid */
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-top: 10%;
+}
+
+/* Gallery Item Styles */
+.gallery-item {
+    border: 1px solid rgb(0, 0, 0); /* Box outline set to red */
+    padding: 10px;
+    text-align: center;
+}
+/* Media Query for Responsive Design */
+img {
+    width: 33%;  /* Image will take width of its container */
+    height: auto; /* Height will adjust automatically to maintain aspect ratio */
+}
