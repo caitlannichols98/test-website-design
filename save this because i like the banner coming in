@@ -1,52 +1,27 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background-color: rgb(255, 255, 255);
 }
 
 .banner {
     background-color: black;
+    color: white;
     padding: 20px;
     text-align: center;
-    position: relative;
-    height: 80px;
-    overflow: hidden;
-}
+    font-size: 1.2rem;
 
-.text-part {
-    color: white;
-    font-size: 2rem;
+    /* animation styles */
     opacity: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+    transform: translateY(-100%);
+    animation: slideFadeIn 1s ease-out forwards;
 }
 
-#text1 {
-    animation: fadeSequence1 6s linear infinite;
-}
-
-#text2 {
-    animation: fadeSequence2 6s linear infinite;
-}
-
-@keyframes fadeSequence1 {
-    0% { opacity: 0; }
-    10% { opacity: 1; }
-    40% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@keyframes fadeSequence2 {
-    0% { opacity: 0; }
-    45% { opacity: 0; }
-    55% { opacity: 1; }
-    85% { opacity: 1; }
-    100% { opacity: 0; }
+/* animation keyframes */
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
