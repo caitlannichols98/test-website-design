@@ -1,0 +1,83 @@
+body {
+    background-image: url('editedphotoclass.jpg'); 
+    background-size: cover; /* Make sure ti covers the screen */
+    background-position: center; /* Center the GIF */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep it fixed while scrolling */
+}
+/* VHS Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('editedphotoclass.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.text-part {
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Menu styling */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Spacing between menu items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+  width: 300px;
+  height: 70px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 15px;
+  position: relative;
+  gap: 10px;
+}
+
