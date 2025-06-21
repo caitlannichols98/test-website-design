@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+}
+
+.text-part {
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#text1 {
+    animation: fadeSequence1 6s linear infinite;
+}
+
+#text2 {
+    animation: fadeSequence2 6s linear infinite;
+}
+
+@keyframes fadeSequence1 {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeSequence2 {
+    0% { opacity: 0; }
+    45% { opacity: 0; }
+    55% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* Menu styling */
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Spacing between menu items */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    width: 300px; /* Adjust for better visibility */
+    height: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    text-decoration: none;
+    padding-left: 15px; /* Adds space to the left for the icon */
+    position: relative;
+    gap: 10px; /* Spacing between icon and text */
+}
+
+/* Add the flower image before each menu item */
+.menu-item::before {
+    content: "";
+    display: inline-block;
+    width: 55px; /* Adjust the size as needed */
+    height: 55px; /* Adjust the size as needed */
+    background-image: url('closed-flower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Change image on hover */
+.menu-item:hover::before,
+.menu-item:active::before {
+    background-image: url('open-flower.png');
+}
